@@ -3,7 +3,7 @@ import Markdown from "markdown-to-jsx";
 import matter from "gray-matter";
 
 const getPostContent = (slug) => {
-    const folder = "posts/";
+    const folder = "public/posts/";
     const file = `${folder}${slug}.md`;
     const content = fs.readFileSync(file, "utf8");
     const matterResult = matter(content);
