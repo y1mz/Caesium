@@ -6,7 +6,7 @@ export const getPostMetadata = () => {
     const files = fs.readdirSync(folder);
     const markdownPosts = files.filter((file) => file.endsWith(".md"));
     const posts = markdownPosts.map((filename) => {
-        const fileContents = fs.readFileSync(`posts/${filename}`, "utf8");
+        const fileContents = fs.readFileSync(`public/posts/${filename}`, "utf8");
         const matterResult = matter(fileContents);
         const preview = () => {
             const content = matterResult.content;
