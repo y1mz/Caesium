@@ -26,7 +26,7 @@ export default function Home() {
         <Link href="/photos">
           <Cards 
             title="Gallery"
-            photo="/cards/1.jpeg"
+            photo="/cards/4.png"
           />
         </Link>
         <Link href="/blog">
@@ -35,10 +35,6 @@ export default function Home() {
             photo="/cards/3.jpeg"
           />
         </Link>
-          <Cards
-            title="Updates"
-            photo="/cards/3.jpeg"
-          />
       </div>
     </main>
   )

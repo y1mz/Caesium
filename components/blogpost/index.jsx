@@ -5,7 +5,7 @@ function BlogPostCard({ title, content, photo, date }) {
         <div className="flex flex-col rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] bg-neutral-700 hover:bg-teal-800 transition duration-200 md:max-w-4xl md:flex-row">
             <Image
                 className="h-48 w-full rounded-t-lg object-cover md:h-auto md:!rounded-none md:!rounded-l-lg max-w-3xl min-w-[300px]"
-                src="/cards/1.jpeg"
+                src={photo}
                 width={300}
                 height={300}
                 alt="" />

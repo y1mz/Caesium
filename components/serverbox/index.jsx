@@ -49,7 +49,7 @@ function ServerBox() {
                 <p className="text-xl text-center">An cracked SMP server for everyone</p>
                 <p className="text-md text-center underline decoration-orange-950 text-orange-600">1.20.1 + EasyAuth</p>
                 {status === 'online' ? <ServerUP /> : <ServerDown />}
-                <Link className="w-[400px]" href="/">
+                <Link className="w-[400px]" href="https://discord.gg/8dAHkxbKPf">
                     <button className="mb-2 bg-neutral-700 hover:bg-lime-900 text-gray-300 hover:text-gray py-3 px-4 text-lg rounded transition duration-200">
                         <span>Join our Discord</span>
                     </button>

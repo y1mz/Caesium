@@ -11,7 +11,7 @@ export const getPostMetadata = () => {
         const preview = () => {
             const content = matterResult.content;
             const sentences = content.split(/[.!?]/);
-            const firstSentence = sentences.slice(0,1).join("");
+            const firstSentence = sentences.slice(0,2).join("");
             return firstSentence;
         }
 
