@@ -26,10 +26,12 @@ export default function Home() {
             photo="/cards/1.jpeg"
           />
         </Link>
-          <Cards
-            title="Map"
-            photo="/cards/2.jpeg"
+        <Link href="/blog">
+          <Cards 
+            title="Updates"
+            photo="/cards/3.jpeg"
           />
+        </Link>
           <Cards
             title="Updates"
             photo="/cards/3.jpeg"

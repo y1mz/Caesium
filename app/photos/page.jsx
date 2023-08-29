@@ -16,7 +16,8 @@ function GalleryPage() {
                         <Image 
                             className="rounded max-w-[1280px] max-h-[720px]"
                             src={`/photos/${file}`} 
-                            alt={file} 
+                            alt={file}
+			    key={file}
                             width={1600}
                             height={900}
                         />
