@@ -11,11 +11,14 @@ export default function Home() {
     <main className="flex flex-col gap-40 items-center">
       <div className='flex flex-wrap gap-10'>
         <div>
-          <WidgetBot
-            className='sm:h-[700px] sm:w-[500px] h-[300px] sm:mr-20 rounded'
-            server="748845037042794566"
-            channel="1023127047343718430"
-          />
+        <iframe 
+          src="https://discord.com/widget?id=748845037042794566&theme=dark" 
+          width="350" height="500" 
+          allowtransparency="true" frameborder="2" 
+          sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+          className="mr-10"
+          >
+        </iframe>
         </div>
         <ServerBox />
       </div>
