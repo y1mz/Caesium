@@ -3,6 +3,16 @@ import Markdown from "markdown-to-jsx";
 import matter from "gray-matter";
 import Link from "next/link";
 
+export async function generateMetadata({ params }) {
+    const slug = params.slug;
+    const postContent = getPostContent(slug);
+
+    return {
+        title: postContent.data.title,
+        description: postContent.data.description,
+    }
+}
+
 const getPostContent = (slug) => {
     const folder = "public/posts/";
     const file = `${folder}${slug}.md`;
