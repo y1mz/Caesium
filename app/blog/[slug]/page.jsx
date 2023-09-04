@@ -1,6 +1,7 @@
 import fs from "fs";
 import Markdown from "markdown-to-jsx";
 import matter from "gray-matter";
+import Link from "next/link";
 
 const getPostContent = (slug) => {
     const folder = "public/posts/";
@@ -26,7 +27,7 @@ function PostPage(props) {
                     </Markdown>
                 </article>
             </div>
-            <a href="/blog" className="px-60 underline text-3xl">Go Back</a>
+            <Link href="/blog" className="px-60 underline text-3xl">Go Back</Link>
         </div>
     )
 }

@@ -50,11 +50,11 @@ function ServerBox() {
         }
 
         return (
-            <div className="flex flex-col items-center justify-center text-center gap-10">
+            <div className="flex flex-col items-center justify-center text-center gap-10 w-96">
                 <div className={`flex flex-col items-center justify-center gap-10 ${myFont.className}`}>
                     <h1 className="text-3xl text-center"> The Batuhan's Network SMP</h1>
-                    <p className="text-xl text-center">An cracked SMP server for everyone</p>
-                    <p className="text-md text-center underline decoration-orange-950 text-orange-600">1.20.1 + EasyAuth</p>
+                    <p className="text-xl text-center break-words">A cracked SMP server with some tweaks over Vanilla Minecraft.</p>
+                    <p className="text-md text-center underline decoration-orange-950 text-orange-600">1.20.1 + EasyAuth + TerraLith</p>
                 </div>
                 {status === 'online' ? <ServerUP /> : <ServerDown />}
                 <Link className="w-[400px]" href="/">
