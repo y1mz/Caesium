@@ -1,7 +1,13 @@
 "use client";
 
+import localFont from "next/font/local";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+
+const myFont = localFont({
+    src: "./Minecraft.woff2",
+    display: 'swap',
+});
 
 function ServerBox() {
 
@@ -45,11 +51,13 @@ function ServerBox() {
 
         return (
             <div className="flex flex-col items-center justify-center text-center gap-10">
-                <h1 className="text-3xl text-center"> The Batuhan's Network SMP</h1>
-                <p className="text-xl text-center">An cracked SMP server for everyone</p>
-                <p className="text-md text-center underline decoration-orange-950 text-orange-600">1.20.1 + EasyAuth</p>
+                <div className={`flex flex-col items-center justify-center gap-10 ${myFont.className}`}>
+                    <h1 className="text-3xl text-center"> The Batuhan's Network SMP</h1>
+                    <p className="text-xl text-center">An cracked SMP server for everyone</p>
+                    <p className="text-md text-center underline decoration-orange-950 text-orange-600">1.20.1 + EasyAuth</p>
+                </div>
                 {status === 'online' ? <ServerUP /> : <ServerDown />}
-                <Link className="w-[400px]" href="https://discord.gg/8dAHkxbKPf">
+                <Link className="w-[400px]" href="/">
                     <button className="mb-2 bg-neutral-700 hover:bg-lime-900 text-gray-300 hover:text-gray py-3 px-4 text-lg rounded transition duration-200">
                         <span>Join our Discord</span>
                     </button>
