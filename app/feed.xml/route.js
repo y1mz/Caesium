@@ -14,9 +14,9 @@ export async function GET() {
     };
 
     const metadata = {
-        title: "TBNMC",
+        title: "TBN MC Server Updates",
         author: "TBNMC",
-        description: "TBNMC",
+        description: "TBN MC Server Updates",
         url: "www.tbnmc.xyz",
     };
 
@@ -46,6 +46,7 @@ export async function GET() {
             id: url,
             link: url,
             content: mtoh({ content: post.content }),
+            date: new Date(post.date),
             author: post.author,
         });
     });

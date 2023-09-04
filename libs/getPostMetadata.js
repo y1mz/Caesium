@@ -10,8 +10,8 @@ export const getPostMetadata = () => {
         const matterResult = matter(fileContents);
         const preview = () => {
             const content = matterResult.content;
-            const sentences = content.split(/[.!?]/);
-            const firstSentence = sentences.slice(0,2).join("");
+            const sentences = content.split(/[.!)?]/);
+            const firstSentence = sentences.slice(3,5).join("");
             return firstSentence;
         }
 

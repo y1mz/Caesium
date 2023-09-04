@@ -17,7 +17,7 @@ function BlogPostCard({ title, content, photo, date }) {
                     {content}
                 </p>
                 <p className="text-xs text-neutral-300">
-                    {date}
+                    {`${new Date(date).getDate()}/${new Date(date).getMonth()}/${new Date(date).getFullYear()}`}
                 </p>
             </div>
         </div>

@@ -26,6 +26,7 @@ function PostPage(props) {
                     </Markdown>
                 </article>
             </div>
+            <a href="/blog" className="px-60 underline text-3xl">Go Back</a>
         </div>
     )
 }

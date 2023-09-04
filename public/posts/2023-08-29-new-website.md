@@ -1,9 +1,12 @@
 ---
 title: New Website is up now!
 author: Batuhan Y. Yilmaz <batuhan@thebatuhansnetwork.xyz>
-date: 29.08.2023
+date: 2023-09-04
 image: /cards/2.jpeg
 ---
+
+![](/cards/2.jpeg)
+
 Hello everyone, Batuhan here. If you're here from the Discord server well you're already know me but if you don't here is a short about me section.
 
 ## Who I am?
@@ -16,4 +19,10 @@ To make this happen again I spend nearly 120$ and brought the server, the VPS f
 ## Why I build a website for an SMP server?
 - This is a question that I got asked and the answer is simple. I want to take my Discord server and SMP server public for everyone. Purchasing the domain name was the first step for that and this website is the second one. 
 
-I used NextJS 13 with TailwindCSS
+I used NextJS 13 with TailwindCSS to buid the main layout of the site and some other libraries to make things work. For example the styling of the current page comes from [tailwind-typography](https://tailwindcss.com/docs/typography-plugin) and [markdown-to-jsx](https://www.npmjs.com/package/markdown-to-jsx).
+
+This site will be open sourced over [tbnmc-website](https://github.com/BB4tuhanY1lmaz/tbnmc-website) Github repo and it'll be open to any contribution from anyone!
+
+I'll use this place to publish monthly updates about server and photos of members at the photo gallery. But main purpose of this site will be advertaising it on the internet. 
+
+### Until next time! 👋
