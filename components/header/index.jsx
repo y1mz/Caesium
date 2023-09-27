@@ -38,7 +38,7 @@ function Header({ title }) {
 
     function ServerDown() {
         return (
-            <div className="text-rose-600 flex"> <GoDotFill className="text-2xl"/> <p>We're sorry server is down</p> </div>
+            <div className="text-rose-600 flex"> <GoDotFill className="text-2xl"/> <p className="text-xl">We're sorry server is down</p> </div>
         )
     }
 
@@ -60,7 +60,7 @@ function Header({ title }) {
     
     return (
         <header className="sm:px-24 px-12 flex justify-between mt-10 text-2xl">
-            <div className="flex gap-4 text-xl mt-10">
+            <div className="flex gap-4 text-xl">
             <Link href="/" className={`hover:underline flex gap-2 ${MCFont.className}`}>
                 <Image 
                     src="/logo.png"
@@ -73,7 +73,7 @@ function Header({ title }) {
             </Link>
             <BackButton />
             </div>
-            <nav className="flex">
+            <nav className={`flex ${MCFont.className}`}>
                 {status === 'online' ? <ServerUP /> : <ServerDown />}
             </nav>
         </header>

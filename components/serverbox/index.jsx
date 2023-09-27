@@ -3,7 +3,7 @@
 import localFont from "next/font/local";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-
+import { cn } from "@/libs/utils"
 import { Alert, AlertDescription, AlertTitle } from "../ui/alert";
 import { RocketIcon } from "@radix-ui/react-icons"
 import { Badge } from "@/components/ui/badge"
@@ -38,7 +38,16 @@ function ServerBox({ ServerIP }) {
         function DisplayAlert() {
             if (alert === true) {
                 return (
-                    <Badge className="z-50 relative top-3 rounded-full text-md bg-lime-200">Copied!</Badge>
+                    <Badge className={cn(
+                        "z-50 relative top-3 rounded-full text-md bg-lime-200",
+                        status !== 'online' && "bg-orange-200"
+                    )}>
+                        Copied!
+                    </Badge>
+                )
+            } else {
+                return (
+                    <div className="h-7"></div>
                 )
             }
         }
@@ -49,7 +58,7 @@ function ServerBox({ ServerIP }) {
                     <div className="mt-3 relative">
                     <DisplayAlert />
                         <pre className="w-[400px] items-center text-center justify-center rounded bg-lime-700 p-4">
-                            <code onClick={toastPop} className="text-gray-100 text-base px-3 py-3 sm:text-xl md:text-2xl font-mono overflow-hidden shadow-xl select-all">{ServerIP}</code>
+                            <code onClick={toastPop} className="text-gray-100 text-base px-3 py-3 sm:text-xl md:text-2xl font-mono overflow-hidden select-all">{ServerIP}</code>
                         </pre>
                     </div>
                 </div>
@@ -58,9 +67,10 @@ function ServerBox({ ServerIP }) {
 
         function ServerDown() {
             return (
-                <div className="mt-3">
+                <div className="mt-3 relative">
+                    <DisplayAlert />
                     <pre className="w-[400px] items-center text-center justify-center rounded bg-orange-900 p-4">
-                        <code className="text-gray-100 text-base px-3 py-3 sm:text-xl md:text-2xl font-mono overflow-hidden shadow-xl select-all">{ServerIP}</code>
+                        <code onClick={toastPop} className="text-gray-100 text-base px-3 py-3 sm:text-xl md:text-2xl font-mono overflow-hidden shadow-xl select-all">{ServerIP}</code>
                     </pre>
                 </div>
             )
