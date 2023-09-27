@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import Image from "next/image";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 function GalleryPage() {
     const gallery = getGallery()
@@ -13,15 +14,16 @@ function GalleryPage() {
             <div className="flex flex-col gap-5 justify-center items-center">
                 {photos.map((file) => (
                     <div>
-                        <Image 
-                            className="rounded max-w-[1280px] max-h-[720px]"
-                            src={`/photos/${file}`} 
-                            alt={file}
-			                key={file}
-                            width={1600}
-                            height={900}
-                        />
-                        <p className="text-sm text-center">{file}</p>
+                        <AspectRatio ratio={16 / 9}>
+                            <Image 
+                                className="rounded max-w-[1280px] max-h-[720px]"
+                                src={`/photos/${file}`} 
+                                alt={file}
+			                    key={file}
+                                width={1600}
+                                height={900}
+                            />
+                        </AspectRatio>
                     </div>
                 ))}
             </div>
