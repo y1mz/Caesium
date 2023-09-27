@@ -46,7 +46,7 @@ function ServerBox({ ServerIP }) {
         function ServerUP() {
             return (
                 <div>
-                    <div className="mt-3">
+                    <div className="mt-3 relative">
                     <DisplayAlert />
                         <pre className="w-[400px] items-center text-center justify-center rounded bg-lime-700 p-4">
                             <code onClick={toastPop} className="text-gray-100 text-base px-3 py-3 sm:text-xl md:text-2xl font-mono overflow-hidden shadow-xl select-all">{ServerIP}</code>
