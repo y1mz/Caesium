@@ -20,7 +20,9 @@ export default function Home() {
           >
         </iframe>
         </div>
-        <ServerBox />
+        <ServerBox 
+          ServerIP="tbnmc.xyz"
+        />
       </div>
       <div className="flex flex-wrap gap-10 w-auto justify-center items-center">
         <Link href="/photos">

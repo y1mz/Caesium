@@ -1,12 +1,19 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
-import { useEffect, useState } from "react";
+import Image from "next/image"
+import Link from "next/link"
+import localFont from "next/font/local";
+import { usePathname } from "next/navigation"
+import { useEffect, useState } from "react"
 import { GoDotFill } from "react-icons/go"
+import { ChevronLeft } from "lucide-react"
+
+const MCFont = localFont({
+    src: "./Minecraft.woff2",
+    display: 'swap',
+});
 
 function Header({ title }) {
-
     const [status, setStatus] = useState('');
     
         useEffect(() => {
@@ -34,11 +41,27 @@ function Header({ title }) {
             <div className="text-rose-600 flex"> <GoDotFill className="text-2xl"/> <p>We're sorry server is down</p> </div>
         )
     }
+
+    function BackButton() {
+        const pathname = usePathname()
+        if (pathname !== `/`) {
+            return (
+                <div className="flex hover:underline align-baseline transition">
+                    <Link href="/" className="flex">
+                        <ChevronLeft />
+                        <p>Go Back</p>
+                    </Link>
+                </div>
+            )
+        } else {
+            return null
+        }
+    }
     
     return (
-        <header className="sm:px-24 px-12 justify-between text-2xl">
-            <div className="flex justify-between text-xl mt-10">
-            <Link href="/" className="hover:underline flex gap-2">
+        <header className="sm:px-24 px-12 flex justify-between mt-10 text-2xl">
+            <div className="flex gap-4 text-xl mt-10">
+            <Link href="/" className={`hover:underline flex gap-2 ${MCFont.className}`}>
                 <Image 
                     src="/logo.png"
                     width={30}
@@ -48,10 +71,11 @@ function Header({ title }) {
                 />
                 {title}
             </Link>
+            <BackButton />
+            </div>
             <nav className="flex">
                 {status === 'online' ? <ServerUP /> : <ServerDown />}
             </nav>
-            </div>
         </header>
     )
 }
