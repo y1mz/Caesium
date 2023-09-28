@@ -46,3 +46,7 @@
     background: rgb(38 38 38);
   }
 }
+
+img {
+  @apply rounded-xl;
+}

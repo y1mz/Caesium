@@ -22,6 +22,10 @@ export default function Home() {
         </div>
         <ServerBox 
           ServerIP="tbnmc.xyz"
+          ServerName="The Batuhan's Network SMP"
+          ServerDescription="A cracked SMP server with some tweaks over Vanilla Minecraft."
+          ServerVersion="1.20.1 + EasyAuth + TerraLith"
+          DiscordInvıte="https://discord.gg/8dAHkxbKPf"
         />
       </div>
       <div className="flex flex-wrap gap-10 w-auto justify-center items-center">
