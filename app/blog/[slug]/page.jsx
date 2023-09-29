@@ -1,7 +1,8 @@
 import fs from "fs";
 import Markdown from "markdown-to-jsx";
 import matter from "gray-matter";
-import Link from "next/link";
+import { getPostMetadata } from "@/libs/getPostMetadata";
+import { notFound } from "next/navigation";
 
 export async function generateMetadata({ params }) {
     const slug = params.slug;
@@ -13,12 +14,24 @@ export async function generateMetadata({ params }) {
     }
 }
 
+export async function generateStaticParams() {
+    const posts = await getPostMetadata()
+    return posts.map((post) => ({
+        slug: post.slug
+    }))
+}
+
 const getPostContent = (slug) => {
-    const folder = "public/posts/";
-    const file = `${folder}${slug}.md`;
-    const content = fs.readFileSync(file, "utf8");
-    const matterResult = matter(content);
-    return matterResult;
+    try {
+        const folder = "public/posts/";
+        const file = `${folder}${slug}.md`;
+        const content = fs.readFileSync(file, "utf8");
+        const matterResult = matter(content);
+        return matterResult;
+    } catch (error) {
+        notFound()
+    }
+    
 }
 
 function PostPage(props) {
@@ -31,13 +44,12 @@ function PostPage(props) {
                 <h1 className="text-3xl text-center items-center">{content.data.title}</h1>
             </div>
             <div className="items-center justify-center lg:px-60 md:px-10 px-auto">
-                <article className="items-center justify-center prose lg:prose-xl prose-invert prose-code:text-sm prose-code:px-3 prose-code:py-3 prose-pre:bg-neutral-600">
+                <article className="items-center md:mx-auto justify-center prose lg:prose-xl prose-invert prose-code:text-sm prose-code:px-3 prose-code:py-3 prose-pre:bg-neutral-600">
                     <Markdown>
                         {content.content}
                     </Markdown>
                 </article>
             </div>
-            <Link href="/blog" className="px-60 underline text-3xl">Go Back</Link>
         </div>
     )
 }

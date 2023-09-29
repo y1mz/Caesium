@@ -30,24 +30,24 @@ function Header({ title }) {
             fetchServerStatus();
         }, []);
     
-    function ServerUP() {
-        return (
-            <div className="text-lime-500 flex"><GoDotFill className="text-2xl"/> <p>Server is UP!</p></div>
-        )
-    }
-
-    function ServerDown() {
-        return (
-            <div className="text-rose-600 flex"> <GoDotFill className="text-2xl"/> <p className="text-xl">We're sorry server is down</p> </div>
-        )
+    function ServerStatus() {
+        if (status !== 'online') {
+            return (
+                <div className="text-rose-600 flex"> <GoDotFill className="text-2xl"/> <p className="text-xl">We're sorry server is down</p> </div>
+            )
+        } else {
+            return (
+                <div className="text-lime-500 flex"><GoDotFill className="text-2xl"/> <p>Server is UP!</p></div>
+            )
+        }
     }
 
     function BackButton() {
         const pathname = usePathname()
-        if (pathname !== `/`) {
+        if (pathname.startsWith('/blog/')) {
             return (
-                <div className="flex hover:underline align-baseline transition">
-                    <Link href="/" className="flex">
+                <div className="hidden md:flex hover:underline align-baseline transition">
+                    <Link href="/blog" className={`flex ${MCFont.className}`}>
                         <ChevronLeft />
                         <p>Go Back</p>
                     </Link>
@@ -59,7 +59,7 @@ function Header({ title }) {
     }
     
     return (
-        <header className="sm:px-24 px-12 flex justify-between mt-10 text-2xl">
+        <header className="sm:px-24 px-12 flex flex-wrap justify-between mt-10 text-2xl">
             <div className="flex gap-4 text-xl">
             <Link href="/" className={`hover:underline flex gap-2 ${MCFont.className}`}>
                 <Image 
@@ -74,7 +74,7 @@ function Header({ title }) {
             <BackButton />
             </div>
             <nav className={`flex ${MCFont.className}`}>
-                {status === 'online' ? <ServerUP /> : <ServerDown />}
+                <ServerStatus />
             </nav>
         </header>
     )

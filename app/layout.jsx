@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
         <Header 
           title="TBN Smp"
         />
-        <div className='min-h-screen items-center sm:p-24 p-12'>
+        <div className='min-h-screen justify-center items-center sm:p-24 p-12'>
           {children}
         </div>
         <Footer />

@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main className="flex flex-col gap-40 items-center">
       <div className='flex flex-wrap gap-10'>
-        <div>
+        <div className='hidden md:flex'>
         <iframe 
           src="https://discord.com/widget?id=748845037042794566&theme=dark" 
           width="300" height="500" 
