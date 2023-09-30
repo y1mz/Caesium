@@ -17,8 +17,8 @@ export function getGallery() {
     };
 }
 
-function GalleryPage() {
-    const gallery = getGallery()
+async function GalleryPage() {
+    const gallery = await getGallery()
     const photos = gallery.pngFiles;
     return (
         <div className="justify-center">
@@ -29,7 +29,8 @@ function GalleryPage() {
                 <div className="justify-center items-center md:ml-[70px]">
                     <div className="flex flex-wrap gap-2">
                         {photos.map((file) => (
-                            <GalleryItem 
+                            <GalleryItem
+                                key={file}
                                 photo={file}
                             />
                         ))}

@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 
-import WidgetBot from '@widgetbot/react-embed';
 import ServerBox from '@/components/serverbox';
 import Cards from '@/components/card';
 

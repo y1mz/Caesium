@@ -8,6 +8,11 @@ const myFont = localFont({
     display: 'swap',
 });
 
+export const metadata = {
+    title: "About The Batuhan's Network SMP",
+    description: "Rules and much more."
+}
+
 function AboutPage() {
     const getPageContent = () => {
         const file = "public/pages/about.md"

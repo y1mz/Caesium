@@ -56,10 +56,10 @@ function ServerBox({ ServerIP, ServerName, ServerDescription, ServerVersion, Dis
                     <div className="mt-3 relative">
                     <DisplayAlert />
                         <pre className={cn(
-                            "w-[400px] items-center text-center justify-center rounded-xl bg-lime-700 p-4",
+                            "md:w-[400px] w-[300px] items-center text-center justify-center rounded-xl bg-lime-700 p-4",
                             status !== 'online' && "bg-orange-900"
                         )}>
-                            <code onClick={toastPop} className="text-gray-100 text-base px-3 py-3 sm:text-xl md:text-2xl font-mono overflow-hidden select-all">{ServerIP}</code>
+                            <code onClick={toastPop} className="text-gray-100 text-xl px-3 py-3 sm:text-xl md:text-2xl font-mono overflow-hidden select-all">{ServerIP}</code>
                         </pre>
                     </div>
                 </div>
@@ -67,7 +67,7 @@ function ServerBox({ ServerIP, ServerName, ServerDescription, ServerVersion, Dis
         }
 
         return (
-            <div className="flex flex-col items-center justify-center text-center gap-10 w-96 z-40 static">
+            <div className="flex flex-col items-center justify-center text-center gap-10 md:w-96 w-[300px] z-40 static">
                 <div className={`flex flex-col items-center justify-center gap-10 ${myFont.className}`}>
                     <h1 className="text-3xl text-center"> {ServerName}</h1>
                     <p className="text-xl text-center break-words">{ServerDescription}</p>
