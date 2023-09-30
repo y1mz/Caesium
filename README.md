@@ -1,4 +1,4 @@
-# Caesium
+# Caesium
 Caesium is a simple website written in NextJS as a website to the [tbnmc.xyz](https://www.tbnmc.xyz) Minecraft server.
 Caesium is still under developement and not ready to be used for another server or something but I have plans to make it configurable and customizable to make it usable for everyone.
 
