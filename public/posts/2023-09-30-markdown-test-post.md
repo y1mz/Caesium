@@ -5,8 +5,6 @@ date: 2023-10-30
 image: /posts/images/2.png
 ---
 
-![](/posts/images/2.png)
-
 # Markdown: Syntax
 
 *   [Overview](#overview)
