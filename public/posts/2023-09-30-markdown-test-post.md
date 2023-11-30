@@ -1,6 +1,5 @@
 ---
 title: Markdown Test Post
-author: Batuhan Y. Yilmaz <batuhan@thebatuhansnetwork.xyz>
 date: 2023-10-30
 image: /posts/images/2.png
 ---
