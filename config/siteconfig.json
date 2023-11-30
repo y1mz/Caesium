@@ -1,6 +1,8 @@
 {
-    "ServerName": "Caesium",
+    "SiteName": "Caesium",
+    "SiteDescription": "Caesium is a simple markdown based website designed to be used as a website for simple Minecraft Servers.",
     "siteUrl": "example.com",
+    "ServerName": "Caesium",
     "ServerDescription": "A simple Markdown based website created for Minecraft Sevrers",
     "ServerVersion": "1.20.1 + EasyAuth + Terralith",
     "DiscordInviteCode": "8dAHkxbKPf",

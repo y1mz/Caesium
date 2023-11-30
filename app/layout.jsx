@@ -6,9 +6,18 @@ import Footer from '@/components/footer';
 
 const inter = Inter({ subsets: ['latin'] })
 
+import config from "@/config/siteconfig.json"
+
 export const metadata = {
-  title: "The Batuhan's Network SMP",
-  description: "The Batuhan's Network SMP (shortly tbnmc) is a simple SMP (Survival Multi Player) server that aims to give you a great experience of playing on a survival world with other people.",
+  title: config.SiteName,
+  description: config.SiteDescription,
+  openGraph: {
+    title: config.SiteName,
+    description: config.SiteDescription,
+    url: `https://${config.siteUrl}/`,
+    siteName: config.siteName,
+    type: `website`
+  }
 }
 
 export default function RootLayout({ children }) {

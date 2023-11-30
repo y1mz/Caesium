@@ -13,7 +13,27 @@ export async function generateMetadata({ params }) {
     const postContent = getPostContent(slug);
 
     return {
-        title: postContent.data.title
+        title: postContent.data.title,
+        description: postContent.data.description,
+        openGraph: {
+            title: postContent.data.title,
+            description: postContent.data.description,
+            url: `/posts/${slug}`,
+            type: `article`,
+            siteName: config.siteName,
+            publishedTime: new Date(postContent.data.date).toISOString(),
+            modifiedTime: new Date(postContent.data.date).toISOString(),
+            authors: config.authorName,
+            images: [
+                {
+                    url: `https://${config.siteUrl}/${postContent.data.image}`,
+                    secureUrl: `https://${config.siteUrl}/${postContent.data.image}`,
+                    width: 1200,
+                    height: 630,
+                    alt: `Preview image for ${postContent.data.title}`,
+                }
+            ],
+        },
     }
 }
 
