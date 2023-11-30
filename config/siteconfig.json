@@ -1,0 +1,13 @@
+{
+    "ServerName": "Caesium",
+    "siteUrl": "example.com",
+    "ServerDescription": "A simple Markdown based website created for Minecraft Sevrers",
+    "ServerVersion": "1.20.1 + EasyAuth + Terralith",
+    "DiscordInviteCode": "8dAHkxbKPf",
+    "authorName": "Batuhan Y. Yilmaz",
+    "authorEmail": "mail.example.com",
+    "serverAdress": "play.example.com",
+    "serverIP": "92.205.17.6",
+    "serverPort": "25565",
+    "year": "2023"
+}
