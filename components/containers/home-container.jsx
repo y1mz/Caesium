@@ -14,7 +14,7 @@ function HomeContainer() {
                     <iframe
                         src="https://discord.com/widget?id=748845037042794566&theme=dark"
                         width="300" height="500"
-                        allowTransparency="true" frameBorder="2"
+                        frameBorder="2"
                         sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
                         className="mr-10"
                     >

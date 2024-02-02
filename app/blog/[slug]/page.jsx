@@ -8,6 +8,19 @@ import config from "@/config/siteconfig.json"
 
 const MinecraftFont = localFont({ src: './Minecraft.woff2' })
 
+const getPostContent = (slug) => {
+    try {
+        const folder = "public/posts/";
+        const file = `${folder}${slug}.md`;
+        const content = fs.readFileSync(file, "utf8");
+        const matterResult = matter(content);
+        return matterResult;
+    } catch (error) {
+        notFound()
+    }
+
+}
+
 export async function generateMetadata({ params }) {
     const slug = params.slug;
     const postContent = getPostContent(slug);
@@ -42,19 +55,6 @@ export async function generateStaticParams() {
     return posts.map((post) => ({
         slug: post.slug
     }))
-}
-
-const getPostContent = (slug) => {
-    try {
-        const folder = "public/posts/";
-        const file = `${folder}${slug}.md`;
-        const content = fs.readFileSync(file, "utf8");
-        const matterResult = matter(content);
-        return matterResult;
-    } catch (error) {
-        notFound()
-    }
-    
 }
 
 function PostPage(props) {

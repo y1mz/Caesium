@@ -8,15 +8,29 @@ const inter = Inter({ subsets: ['latin'] })
 
 import config from "@/config/siteconfig.json"
 
+const websiteURL = process.env.NODE_ENV === 'production'
+    ? `https://${config.siteUrl}/`
+    : 'http://localhost:3000/'
+
 export const metadata = {
   title: config.SiteName,
   description: config.SiteDescription,
+  metadataBase: new URL(websiteURL),
   openGraph: {
     title: config.SiteName,
     description: config.SiteDescription,
-    url: `https://${config.siteUrl}/`,
+    url: websiteURL,
     siteName: config.siteName,
-    type: `website`
+    type: `website`,
+    images: [
+      {
+        url: "https://raw.githubusercontent.com/B4tuhanY1lmaz/Caesium/main/public/photos/9.png",
+        secureUrl: "https://raw.githubusercontent.com/B4tuhanY1lmaz/Caesium/main/public/photos/9.png",
+        width: 1200,
+        height: 630,
+        alt: "Preview image for TbnMC Website"
+      }
+    ]
   }
 }
 
