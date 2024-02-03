@@ -1,22 +1,28 @@
-## The Batuhan's Network SMP
-- A cracked SMP server with some tweaks over Vanilla Minecraft.
-- Near zero rule experience!
-- *And much more!* 
+---
+title: About Us
+url: about
+---
+# Caesium
+Caesium is a simple Markdown based website written using NextJS.
 
-### What's this server?
-The Batuhan's Network SMP (shortly tbnmc) is a simple SMP (Survival Multi Player) server that aims to give you a great experience of playing on a survival world with other people. 
+## Features:
+- 📝 Markdown based
+- 💾 Staticly rendered
+- 🔎 SEO Optimized
 
-In our world generation we used [Terralith](https://www.curseforge.com/minecraft/mc-mods/terralith) and [Structory](https://www.curseforge.com/minecraft/mc-mods/structory) mods to add more places and landscapes to explore with your friends!
+## Getting Started
 
-### Rules
-To keep our server a nice and secure place we have some tiny rules that easy to follow. 
+- Edit the siteconfig.json over at ```config/siteconfig.json```
+- Edit the about page over at ```public/pages/about.md```
+- Place your images to ```public/photos```
+- Place your posts to ```public/posts```
 
-- No Griefing or stealing from other people!
-- You can't move into other peoples base without permission.
-- No chat spamming! 
+### Deploying
 
-### Contact
-If something goes wrong and you need help, we're always open to help you out. You can reach us from either our Discord Server or send our admin an e-mail.
+#### Vercel
+- Fork this repo and edit your content according to ```Getting Started section```
+- Go to [vercel.com](https://vercel.com) and create a new project from your forked repo.
+- Enjoy!
 
-- [Discord Server](https://discord.gg/8dAHkxbKPf)
-- [E-mail](mailto://batuhan@thebatuhansnetwork.xyz)
+### SelfHosting
+- You can read my blogpost for more information. [How I deploy my NextJS projects with Nginx and Cloudflare Tunnel.](https://www.thebatuhansnetwork.xyz/blog/2023-09-05-how-i-deploy-my-nextjs).
