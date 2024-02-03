@@ -1,7 +1,9 @@
 import net from "net";
 import { send } from "micro";
 
-const serverAdress = '92.205.17.6';
+import config from "@/config/siteconfig.json"
+
+const serverAdress = config.serverIP;
 const serverPort = 25565;
 
 export async function GET(req, res) {

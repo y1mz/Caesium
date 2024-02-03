@@ -8,7 +8,6 @@ import config from "@/config/siteconfig.json"
 import cards from "@/config/cards.json"
 
 function HomeContainer() {
-    console.log(cards)
     return (
         <div className="flex flex-col gap-40 items-center justify-center mx-auto">
             <div className='flex flex-wrap gap-10 mx-auto'>
