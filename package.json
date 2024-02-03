@@ -1,6 +1,6 @@
 {
   "name": "Caesium",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -27,7 +27,6 @@
     "micro": "^10.0.1",
     "next": "13.5",
     "postcss": "8.4.28",
-    "radix-ui": "^1.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
