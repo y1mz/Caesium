@@ -22,7 +22,7 @@ function BlogPage() {
 
     return (
         <div className="justify-center">
-            <div className="items-center py-10">
+            <div className="items-center">
                 <HeroSection
                     title={"Server Updates"}
                 />
