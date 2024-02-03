@@ -71,7 +71,6 @@ function ServerBox({ ServerIP, ServerName, ServerDescription, ServerVersion, Dis
                 <div className={`flex flex-col items-center justify-center gap-10 ${myFont.className}`}>
                     <h1 className="text-3xl text-center"> {ServerName}</h1>
                     <p className="text-xl text-center break-words">{ServerDescription}</p>
-                    <p className="text-md text-center text-orange-600">{ServerVersion}</p>
                 </div>
                 <ServerStatus />
                     <div className="w-[400px]">

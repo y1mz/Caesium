@@ -5,8 +5,10 @@ import Cards from '@/components/card'
 import InfoContainer from "@/components/info-container"
 
 import config from "@/config/siteconfig.json"
+import cards from "@/config/cards.json"
 
 function HomeContainer() {
+    console.log(cards)
     return (
         <div className="flex flex-col gap-40 items-center justify-center mx-auto">
             <div className='flex flex-wrap gap-10 mx-auto'>
@@ -30,18 +32,15 @@ function HomeContainer() {
             </div>
             <InfoContainer />
             <div className="flex flex-wrap gap-10 w-auto justify-center items-center">
-                <Link href="/photos">
-                    <Cards
-                        title="Gallery"
-                        photo="/cards/4.png"
-                    />
-                </Link>
-                <Link href="/blog">
-                    <Cards
-                        title="Updates"
-                        photo="/cards/3.jpeg"
-                    />
-                </Link>
+                {cards.map((card) => (
+                    <Link href={card.link}>
+                        <Cards
+                            title={card.title}
+                            photo={card.img}
+                            key={card.title}
+                        />
+                    </Link>
+                ))}
             </div>
         </div>
     )

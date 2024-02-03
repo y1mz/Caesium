@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Gallery",
+    "img": "/cards/4.png",
+    "link": "/photos"
+  },
+  {
+    "title": "Updates",
+    "img": "/cards/3.jpeg",
+    "link": "/blog"
+  }
+]

@@ -11,6 +11,7 @@ const nextConfig = {
   
       return config;
     },
+    transpilePackages: ['lucide-react'] // Needed for dynamic icons
   };
 
 module.exports = nextConfig

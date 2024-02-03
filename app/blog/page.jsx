@@ -13,6 +13,7 @@ function BlogPage() {
                     content={post.preview}
                     date={post.date}
                     photo={post.image}
+                    key={post.slug}
                 />
             </Link>
         </div>

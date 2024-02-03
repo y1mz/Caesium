@@ -1,0 +1,23 @@
+[
+  {
+    "icon": "scroll-text",
+    "text": "Markdown based pages",
+    "color": "#D200D2",
+    "alt": "Pages and blog posts are based on Markdown."
+  },
+  {
+    "icon": "sliders",
+    "text": "Easy to configure",
+    "alt": "Configuring Caesium as simple as editing JSON files!"
+  },
+  {
+    "icon": "search",
+    "text": "SEO Optimized",
+    "alt": "SEO makes Caesium more discoverable!"
+  },
+  {
+    "icon": "save-all",
+    "text": "Staticly rendered.",
+    "alt": "Every page on Caesium is being rendered on build. Which allows you to deploy it anywhere!"
+  }
+]
