@@ -2,14 +2,20 @@ import fs from "fs"
 import Markdown from "markdown-to-jsx"
 import matter from "gray-matter"
 import { getPageMetadata } from "@/libs/getPageMetadata"
+import { notFound } from "next/navigation"
+
 
 import HeroSection from "@/components/hero-section"
 const getPageContent = (page) => {
-    const folder = "public/pages/"
-    const file = `${folder}${page}.md`
-    const content = fs.readFileSync(file, "utf8")
-    const matterResult = matter(content)
-    return matterResult
+    try {
+        const folder = "public/pages/"
+        const file = `${folder}${page}.md`
+        const content = fs.readFileSync(file, "utf8")
+        const matterResult = matter(content)
+        return matterResult
+    } catch (e) {
+        notFound()
+    }
 }
 
 export async function generateStaticParams() {
