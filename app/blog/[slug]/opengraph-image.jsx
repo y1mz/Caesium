@@ -4,7 +4,7 @@ import { getPostContent } from "./page"
 import { Inter } from "next/font/google"
 
 const websiteURL = process.env.NODE_ENV === 'production'
-    ? `https://www.tbnmc.xyz/`
+    ? `https://caesium-murex.vercel.app/`
     : 'http://localhost:3000/'
 
 const inter = Inter({
