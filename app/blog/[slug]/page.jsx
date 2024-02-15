@@ -36,15 +36,6 @@ export async function generateMetadata({ params }) {
             publishedTime: new Date(postContent.data.date).toISOString(),
             modifiedTime: new Date(postContent.data.date).toISOString(),
             authors: config.authorName,
-            images: [
-                {
-                    url: `https://${config.siteUrl}/${postContent.data.image}`,
-                    secureUrl: `https://${config.siteUrl}/${postContent.data.image}`,
-                    width: 1200,
-                    height: 630,
-                    alt: `Preview image for ${postContent.data.title}`,
-                }
-            ],
         },
     }
 }
