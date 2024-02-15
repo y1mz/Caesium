@@ -8,7 +8,7 @@ import config from "@/config/siteconfig.json"
 
 const MinecraftFont = localFont({ src: './Minecraft.woff2' })
 
-const getPostContent = (slug) => {
+export const getPostContent = (slug) => {
     try {
         const folder = "public/posts/";
         const file = `${folder}${slug}.md`;
@@ -18,7 +18,6 @@ const getPostContent = (slug) => {
     } catch (error) {
         notFound()
     }
-
 }
 
 export async function generateMetadata({ params }) {
