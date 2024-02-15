@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 import config from "@/config/siteconfig.json"
 
 const websiteURL = process.env.NODE_ENV === 'production'
-    ? `https://${config.siteUrl}/`
+    ? `https://caesium-tbnmc.vercel.app/`
     : 'http://localhost:3000/'
 
 export const metadata = {
