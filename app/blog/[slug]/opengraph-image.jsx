@@ -1,4 +1,4 @@
-import { ImageResponse } from "next/og"
+import { ImageResponse } from '@vercel/og'
 import { getPostContent } from "./page"
 
 import { Inter } from "next/font/google"
