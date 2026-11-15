@@ -1,5 +1,3 @@
-"use client"
-
 import localFont from "next/font/local"
 
 const MinecraftFont = localFont({ src: './serverbox/Minecraft.woff2' })
@@ -11,7 +9,7 @@ function HeroSection({ title }) {
             <div className="w-full">
 
             </div>
-            <div className={`absolute bottom-0 left-0 right-o top-0 h-full w-full 
+            <div className={`absolute bottom-0 left-0 right-o top-0 h-full w-full
                     overflow-hidden bg-fixed bg-black/40`}
             >
                 <div className="flex flex-col h-full items-center justify-center">

@@ -1,7 +1,9 @@
 {
     "SiteName": "Caesium",
     "SiteDescription": "Caesium is a simple markdown based website designed to be used as a website for simple Minecraft Servers.",
-    "siteUrl": "example.com",
+    "SiteUrl": "http://example.com",
+    "SiteOGImage": "",
+    "SiteAltDescription": "",
     "ServerName": "Caesium",
     "ServerDescription": "A simple Markdown based website created for Minecraft Sevrers",
     "ServerVersion": "1.20.1 + EasyAuth + Terralith",

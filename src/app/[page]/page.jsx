@@ -25,8 +25,8 @@ export async function generateStaticParams() {
     }))
 }
 
-export function generateMetadata(props) {
-    const page = props.params.page
+export async function generateMetadata({ params }) {
+    const { page } = await params
     const content = getPageContent(page)
 
     return {
@@ -34,8 +34,8 @@ export function generateMetadata(props) {
     }
 }
 
-function MarkdownPages(props) {
-    const page = props.params.page
+async function MarkdownPages({ params }) {
+    const { page } = await params
     const content = getPageContent(page)
 
     return (

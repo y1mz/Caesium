@@ -1,6 +1,7 @@
 import { Feed } from "feed";
 import Showdown from "showdown";
 import { getPostMetadata } from "@/libs/getPostMetadata";
+import config from "&/config/siteconfig.json"
 
 export async function GET() {
 
@@ -14,10 +15,10 @@ export async function GET() {
     };
 
     const metadata = {
-        title: "TBN MC Server Updates",
-        author: "TBNMC",
-        description: "TBN MC Server Updates",
-        url: "www.tbnmc.xyz",
+        title: `${config.ServerName} Server Updates`,
+        author: config.authorName,
+        description: `${config.ServerName} Server Updates`,
+        url: new URL(config.SiteUrl + "feed.xml"),
     };
 
     const postMetadataReversed = getPostMetadata();
@@ -32,7 +33,7 @@ export async function GET() {
         image: `${metadata.url}/logo.png`,
         copyright: `GPLv3 ${new Date().getFullYear()}`,
         updated: new Date(),
-        generator: `Manually typed by Batuhan Y. Yilmaz`,
+        generator: `Caesium RSS Generator`,
         feedLinks: {
             rss2: `${metadata.url}/feed.xml`
         },

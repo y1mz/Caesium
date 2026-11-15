@@ -4,7 +4,7 @@ import matter from "gray-matter"
 import { getPostMetadata } from "@/libs/getPostMetadata"
 import { notFound } from "next/navigation"
 import localFont from "next/font/local"
-import config from "@/config/siteconfig.json"
+import config from "&/config/siteconfig.json"
 
 const MinecraftFont = localFont({ src: './Minecraft.woff2' })
 
@@ -21,7 +21,7 @@ export const getPostContent = (slug) => {
 }
 
 export async function generateMetadata({ params }) {
-    const slug = params.slug;
+    const { slug } = await params;
     const postContent = getPostContent(slug);
 
     return {
@@ -56,19 +56,19 @@ export async function generateStaticParams() {
     }))
 }
 
-function PostPage(props) {
-    const slug = props.params.slug;
+async function PostPage({ params }) {
+    const { slug } = await params
     const content = getPostContent(slug);
 
     return (
         <div className="justify-center">
             <div className="relative overflow-hidden bg-center h-[150px] sm:h-[200px] md:h-[250px] w-full z-0 rounded-2xl mb-10">
                 <div className="w-full">
-                <img 
+                <img
                     src={content.data.image} alt={`Hero Image`} className={`block object-center object-cover inset-0 min-h-auto`}
                 />
                 </div>
-                <div className={`absolute bottom-0 left-0 right-o top-0 h-full w-full 
+                <div className={`absolute bottom-0 left-0 right-o top-0 h-full w-full
                     overflow-hidden bg-fixed bg-black/60`}
                 >
                     <div className="flex flex-col h-full items-center justify-center">

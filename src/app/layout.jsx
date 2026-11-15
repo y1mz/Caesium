@@ -6,10 +6,10 @@ import Footer from '@/components/footer';
 
 const inter = Inter({ subsets: ['latin'] })
 
-import config from "@/config/siteconfig.json"
+import config from "&/config/siteconfig.json"
 
 const websiteURL = process.env.NODE_ENV === 'production'
-    ? `https://caesium-tbnmc.vercel.app/`
+    ? config.SiteUrl
     : 'http://localhost:3000/'
 
 export const metadata = {
@@ -24,11 +24,11 @@ export const metadata = {
     type: `website`,
     images: [
       {
-        url: "https://raw.githubusercontent.com/B4tuhanY1lmaz/Caesium/main/public/photos/9.png",
-        secureUrl: "https://raw.githubusercontent.com/B4tuhanY1lmaz/Caesium/main/public/photos/9.png",
+        url: config.SiteOGImage,
+        secureUrl: config.SiteOGImage,
         width: 1200,
         height: 630,
-        alt: "Preview image for TbnMC Website"
+        alt: config.SiteAltDescription
       }
     ]
   }
@@ -38,8 +38,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`text-white ${inter.className}`}>
-        <Header 
-          title="TBN Smp"
+        <Header
+        title={config.ServerName}
         />
         <div className='min-h-screen justify-center items-center sm:p-24 p-12'>
           {children}

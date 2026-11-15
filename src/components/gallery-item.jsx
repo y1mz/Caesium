@@ -1,10 +1,10 @@
 import Image from "next/image"
 
-function GalleryItem({ photo, src }) {
+function GalleryItem({ photo }) {
     return (
         <div className="flex w-[400px] justify-center flex-wrap">
             <a href={`/photos/${photo}`} className="p-3">
-                <Image 
+                <Image
                     src={`/photos/${photo}`}
                     height={360}
                     width={640}
