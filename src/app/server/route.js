@@ -1,7 +1,6 @@
 import net from "net";
-import { send } from "micro";
 
-import config from "@/config/siteconfig.json"
+import config from "&/config/siteconfig.json"
 
 const serverAdress = config.serverIP;
 const serverPort = 25565;

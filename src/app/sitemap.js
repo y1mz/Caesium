@@ -1,5 +1,5 @@
 import { getPostMetadata } from "@/libs/getPostMetadata"
-import config from "@/config/siteconfig.json"
+import config from "&/config/siteconfig.json"
 
 export default async function sitemap() {
     const allPosts = getPostMetadata()

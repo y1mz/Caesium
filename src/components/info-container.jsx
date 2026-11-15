@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react"
 import dynamicIconImports from "lucide-react/dynamicIconImports"
 
-import items from "@/config/infoSection.json"
+import items from "&/config/infoSection.json"
 
 const Icon = ({ name, ...props }) => {
     const LucideIcon = lazy(dynamicIconImports[name])

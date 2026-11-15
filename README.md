@@ -21,4 +21,4 @@ Caesium is a simple Markdown based website written using NextJS.
 - Enjoy!
 
 ### SelfHosting
-- You can read my blogpost for more information. [How I deploy my NextJS projects with Nginx and Cloudflare Tunnel.](https://www.thebatuhansnetwork.xyz/blog/2023-09-05-how-i-deploy-my-nextjs).
+- You can read my blogpost for more information. [How I deploy my NextJS projects with Nginx and Cloudflare Tunnel.](https://www.yyilmaz.com.tr/blog/2023-09-05-how-i-deploy-my-nextjs).
